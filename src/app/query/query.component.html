@@ -1,0 +1,8 @@
+<p>query succes</p>
+<div *ngIf=" vals != null ">
+    <p>{{ vals.data.name }}</p>
+</div>
+
+<div *ngIf=" valsAll != null ">
+    <p *ngFor="let x of valsAll">{{ x.appid }}</p>
+</div>
