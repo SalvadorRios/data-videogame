@@ -33,15 +33,15 @@ export class QueryComponent implements OnInit {
   }
 
   query(){
-    return this.http.get('http://localhost:8000/api/query');
+    return this.http.get('http://18.208.150.59:8000/api/query');
   }
 
   queryAll(){
-    return this.http.get('http://localhost:8000/api/queryAll');
+    return this.http.get('http://18.208.150.59:8000/api/queryAll');
   }
 
   queryOne(val){
-    return this.http.get('http://localhost:8000/api/queryOne',val);
+    return this.http.get('http://18.208.150.59:8000/api/queryOne',val);
   }
 
   iter(){
