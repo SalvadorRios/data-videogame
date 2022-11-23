@@ -6,6 +6,7 @@ const startupdebug = require('debug')('app:startup');
 var query = require('./routes/queryRoute');
 var queryAll = require('./routes/queryAllRoute');
 var queryOne = require('./routes/queryOne');
+var queryGames = require('./routes/gamesQuery');
 
 app.use(express.json())
 app.use(cors());
@@ -21,6 +22,7 @@ app.use(function(req, res, next) {
 app.use('/api', query);
 app.use('/api', queryAll);
 app.use('/api', queryOne);
+app.use('/api', queryGames);
 
 app.get('/', (req, res) => {res.send('Hello World!')})
 

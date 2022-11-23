@@ -1,0 +1,38 @@
+img{
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    max-height: 200px;
+    height: 200px;
+}
+.cardCont{
+    background: RGBA(0,0,0,0.5);
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.767);
+    color: #fff;
+    margin: 30px;
+    padding: 0px;
+}
+.cardTitle{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid{
+    justify-content: center;
+    width: 100%;
+}
+
+.cardCont:hover {
+    box-shadow: 2px 8px 45px rgba(255, 255, 255, 0.774);
+    transform: translate3D(0, -2px, 0);
+}
+.titulo{
+    color: white;
+    text-align: center;
+    margin: 20px;
+}
+.cardContent{
+    padding: 10px;
+}

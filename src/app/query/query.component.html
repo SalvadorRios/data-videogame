@@ -1,8 +1,29 @@
-<p>query succes</p>
+<div class="titulo">
+    <h1>Visualizacion de datos</h1>
+</div>    
 <div *ngIf=" vals != null ">
     <p>{{ vals.data.name }}</p>
 </div>
 
-<div *ngIf=" valsAll != null ">
+<!-- <div *ngIf=" valsAll != null ">
     <p *ngFor="let x of valsAll">{{ x.appid }}</p>
+</div> -->
+<div class="contGrid">
+    <div class="row grid">
+        <div class="cardCont col-md-2" *ngFor="let x of gamesIter">
+            <div class="cardImg">
+                <img src = {{x.background_image}} alt="">
+            </div>
+            <div class="cardContent">
+                <div class="cardTitle">
+                    {{x.name}}
+                </div>
+                <div class="cardText">
+                    <p>{{ x.released }}</p>
+                    <p *ngFor="let y of x.genres">{{y.name}}</p>
+                    <p>cont 3</p>
+                </div>
+            </div>    
+        </div>
+    </div>
 </div>
