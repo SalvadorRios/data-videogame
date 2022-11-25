@@ -22,7 +22,7 @@
                     <p>{{ x.released }}</p>
                     <p *ngFor="let y of x.genres">{{y.name}}</p>
                 </div>
-                <button class="btn btn-primary">Info</button>
+                <button class="btn btn-primary" onclick=sendID(x.id) >Info</button>
             </div>    
         </div>
     </div>
