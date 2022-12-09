@@ -28,5 +28,5 @@ app.get('/', (req, res) => {res.send('Hello World!')})
 
 var port = process.env.PORT || 8000;
 app.listen(port, () => {
-    startupdebug('Listening @', port);
+    console.log('Listening @', port);
 });
