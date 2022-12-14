@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class GameInfoComponent implements OnInit {
 
   order: string;
+  resultGame:any;
   constructor(private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit() {
@@ -23,14 +24,19 @@ export class GameInfoComponent implements OnInit {
         this.GetInfo();
   }
 
-  queryInfo(){
+  queryInfo(val){
     console.log('query', this.order);
-    return this.http.get('http://localhost:8000/api/queryOne', Headers[this.order]);
+    return this.http.get('http://localhost:8000/api/queryOne',{
+      params:{
+        val
+      }
+    });
   }
 
   GetInfo(){
-    this.queryInfo().subscribe((result)=>{
+    this.queryInfo(this.order).subscribe((result)=>{
         console.log('Data Games Info: ', result);
+        this.resultGame=result;
     });
 }
 
