@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-query',
@@ -33,13 +32,5 @@ export class QueryComponent implements OnInit {
         this.gamesIter = this.valsGamesResult.results;
           console.log('Data Games: ', this.gamesIter);
       });
-  }
-  sendID(){
-    console.log('holamundo');
-    
-      // this.router.navigate(
-      //   ['/info'],
-      //   { queryParams: { order: val, 'price-range': 'not-cheap' } }
-      // );
   }
 }

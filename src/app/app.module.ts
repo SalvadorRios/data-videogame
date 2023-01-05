@@ -12,6 +12,7 @@ import { QueryComponent } from './query/query.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GameInfoComponent } from './game-info/game-info.component';
 import { ErrorComponent } from './error/error.component';
+import { NextComponent } from './next/next.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ErrorComponent } from './error/error.component';
     GraficasComponent,
     QueryComponent,
     GameInfoComponent,
-    ErrorComponent
+    ErrorComponent,
+    NextComponent
   ],
   imports: [
     BrowserModule,

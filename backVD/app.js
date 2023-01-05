@@ -7,6 +7,7 @@ var query = require('./routes/queryRoute');
 var queryAll = require('./routes/queryAllRoute');
 var queryOne = require('./routes/queryOne');
 var queryGames = require('./routes/gamesQuery');
+var queryGamesNext = require('./routes/next.route');
 
 app.use(express.json())
 app.use(cors());
@@ -23,6 +24,7 @@ app.use('/api', query);
 app.use('/api', queryAll);
 app.use('/api', queryOne);
 app.use('/api', queryGames);
+app.use('/api', queryGamesNext);
 
 app.get('/', (req, res) => {res.send('Hello World!')})
 
