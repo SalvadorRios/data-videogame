@@ -1,4 +1,52 @@
 <div class="gameInfoCont">
-    <h1>game info</h1>
-    <p>{{resultGame | json}}</p>
+    <h1 class="titulo">{{resultGame.name}}</h1>
+
+    <div class="superior row">
+        <div class="col">
+           <img class="img" src='{{resultGame.background_image}}' alt=""> 
+        </div>
+        <div class="col">
+            <div class="desc" [innerHTML]="resultGame.description"></div>
+            <p>Released: {{resultGame.released}}</p>
+            <p>Updated: {{resultGame.updated}}</p>
+            <p>Website: {{resultGame.website}}</p>
+            <p>Rating: {{resultGame.rating}}</p>
+            <p>Rating Top: {{resultGame.rating_top}}</p>
+        </div>
+    </div>
+
+    <div class="plataforms">
+        <div *ngFor="let x of resultGame.metacritic_platforms">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title">{{x.platform.name}}</h5>
+                <p class="card-text">Metascore: {{x.metascore}}</p>
+                <a href="{{x.url}}" class="btn btn-primary">More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="graficas">
+        <echarts [initOpts]="initOpts" [options]="options"></echarts>
+    </div>
+
+    <div class="stores">
+        <div *ngFor="let x of resultGame.stores">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title">{{x.store.name}}</h5>
+                <p class="card-text">Games Count: {{x.store.games_count}}</p>
+                <a href="{{x.store.domain}}" class="btn btn-primary">Domain</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tags">
+        <div *ngFor="let x of resultGame.tags">
+            <span class="badge text-bg-info">{{x.name}}</span>    
+        </div>
+    </div>
+
 </div>

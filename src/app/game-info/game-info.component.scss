@@ -1,3 +1,26 @@
 .gameInfoCont{
     color: white;
 }
+.img{
+    width: 100%;
+}
+.plataforms, .stores, .tags{
+    display: flex;
+    color: black;
+    flex-wrap: wrap;
+}
+.card{
+    margin: 5px !important;
+    background: rgba(0,0,0,0.5) !important;
+    color: aliceblue;
+}
+.graficas{
+    width: 900px;
+    margin: auto;
+}
+.tags{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}

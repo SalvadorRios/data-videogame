@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { GameInfoComponent } from './game-info/game-info.component';
 import { ErrorComponent } from './error/error.component';
 import { NextComponent } from './next/next.component';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { NextComponent } from './next/next.component';
     QueryComponent,
     GameInfoComponent,
     ErrorComponent,
-    NextComponent
+    NextComponent,
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
